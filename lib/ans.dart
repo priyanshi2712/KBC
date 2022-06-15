@@ -11,7 +11,7 @@ class _ansState extends State<ans> {
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    dynamic count=ModalRoute.of(context)!.settings.arguments;
+    dynamic count = ModalRoute.of(context)!.settings.arguments;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -25,14 +25,21 @@ class _ansState extends State<ans> {
             Container(
               height: 300,
               width: double.infinity,
-              child: Image.asset("asset/images/win.jpg",fit: BoxFit.fill,),
+              child: Image.asset(
+                "asset/images/win.jpg",
+                fit: BoxFit.fill,
+              ),
             ),
-            SizedBox(height: 20,),
-            Text("$count/10",style: TextStyle(color:Colors.white,fontSize: 20),),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "$count/10",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
           ],
         ),
       ),
     );
   }
-
 }
