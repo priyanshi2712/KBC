@@ -134,9 +134,7 @@ class _kbc_gameState extends State<kbc_game> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 50),
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -215,19 +213,19 @@ class _kbc_gameState extends State<kbc_game> {
       ),
     );
   }
+
   void answer() {
-    count=0;
-    for (int  j = 0; j <=9; j++) {
+    count = 0;
+    for (int j = 0; j <= 9; j++) {
       if (ans[j] == user_ans[j]) {
         count++;
       }
     }
     // Navigator.pushNamed(context, '/ans', arguments: count);
-   if(count<5){
-     Navigator.pushNamed(context, '/ans1', arguments: count);
-   }
-   else{
-     Navigator.pushNamed(context, '/ans', arguments: count);
-   }
+    if (count < 5) {
+      Navigator.pushNamed(context, '/ans1', arguments: count);
+    } else {
+      Navigator.pushNamed(context, '/ans', arguments: count);
+    }
   }
 }
